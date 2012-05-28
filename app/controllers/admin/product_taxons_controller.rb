@@ -1,4 +1,4 @@
-class Admin::ProductTaxonsController < Admin::ResourceController
+class Spree::Admin::ProductTaxonsController < Spree::Admin::ResourceController
   
   def positions
     #List of taxons, beginnning with a virtual taxons for Home, and then all taxons with pts

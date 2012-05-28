@@ -1,4 +1,4 @@
-class ProductTaxon < ActiveRecord::Base
+class Spree::ProductTaxon < ActiveRecord::Base
   belongs_to :product
   belongs_to :taxon
   default_scope :order=>'product_taxons.position'
