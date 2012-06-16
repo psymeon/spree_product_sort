@@ -3,14 +3,14 @@
   if taxon.id
     products = taxon.products.available
   else
-    products = Product.available.where(:deleted_at => nil)    
+    products = Spree::Product.available.where(:deleted_at => nil)    
   end %>
 
 <% 
-  Product.available.where(:deleted_at => nil).each do |p|
+  Spree::Product.available.where(:deleted_at => nil).each do |p|
     if p.product_taxons.where(:taxon_id => 0) == []
       product_id = p.id.to_i
-      p.product_taxons << ProductTaxon.create(
+      p.product_taxons << Spree::ProductTaxon.create(
 				:product_id => product_id, 
 				:taxon_id=>0)
     end

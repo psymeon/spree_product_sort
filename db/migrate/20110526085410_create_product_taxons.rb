@@ -4,7 +4,7 @@ class CreateProductTaxons < ActiveRecord::Migration
       t.timestamps
       t.integer 'product_id'
       t.integer 'taxon_id'
-      t.integer 'position', :default=>1
+      t.integer 'position', :default=>0
     end
     
     # turn products_taxons into product_taxons with an initial order... 
