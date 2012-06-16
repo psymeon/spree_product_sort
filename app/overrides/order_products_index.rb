@@ -9,5 +9,7 @@ Deface::Override.new(:virtual_path => 'spree/products/index',
     <%  end %>
 
     <%= render :partial => 'spree/shared/products', :locals => { :products => @products.ordered(tid), :taxon => @taxon } %>},
-    		     :original => %q{<%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>}
+    		     :original => %q{<div data-hook="homepage_products">
+    <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+  </div>}
 		    )
