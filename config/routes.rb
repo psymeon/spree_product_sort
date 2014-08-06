@@ -1,8 +1,9 @@
 Spree::Core::Engine.routes.draw do
-  
+
+  match 'admin/taxons/reorder_products/:id' => 'admin/taxons#reorder_products', :via => :put
+
   namespace :admin do
-		# callback for jQuery sort action
-    match 'taxons/reorder_products/:id' => 'taxons#reorder_products', :via => :put
+                # callback for jQuery sort action
        
     resources :product_taxons do
       collection do
